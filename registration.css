@@ -1,0 +1,155 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
+
+/* BODY FIX FOR NAVBAR */
+body{
+  background:#1e1e1e;
+  padding-top:110px;
+}
+
+/* ================= NAVBAR ================= */
+.main-header1{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  padding:15px 0;
+  transition:0.4s;
+}
+
+.nav-wrapper{
+  max-width:100%;
+  margin:auto;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  border-radius:12px;
+}
+
+.logo-brand img{
+  height:60px;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#fff;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#646cff;
+}
+
+.main-header1.scrolled .nav-wrapper{
+  background:#646cff;
+}
+
+/* ================= CENTER CONTENT ================= */
+.main-content{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:calc(100vh - 110px);
+}
+
+.container{
+  width:900px;
+  height:520px;
+  background:#111;
+  display:flex;
+  border-radius:25px;
+  overflow:hidden;
+}
+
+/* LEFT SIDE */
+.form-section{
+  width:50%;
+  padding:60px;
+  color:#fff;
+}
+
+.form{
+  display:none;
+}
+
+.form.active{
+  display:block;
+}
+
+.form h2{
+  margin-bottom:30px;
+}
+
+.input-box{
+  position:relative;
+  margin-bottom:20px;
+}
+
+.input-box input{
+  width:100%;
+  padding:12px 45px 12px 15px;
+  border:none;
+  border-radius:8px;
+  background:#2a2a2a;
+  color:#fff;
+}
+
+.input-box i{
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#6c74ff;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background:#6c74ff;
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.switch{
+  margin-top:20px;
+  font-size:14px;
+}
+
+.switch span{
+  color:#6c74ff;
+  cursor:pointer;
+}
+
+/* RIGHT PANEL */
+.side-panel{
+  width:50%;
+  background:#6c74ff;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  border-top-left-radius:120px;
+  border-bottom-left-radius:120px;
+}
+
+.side-panel h1{
+  font-size:40px;
+}

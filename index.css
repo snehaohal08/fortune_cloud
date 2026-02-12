@@ -131,6 +131,7 @@ body {
   font-size: 20px;
   transition: all 0.3s ease;
 }
+
 .social-icons a:hover {
   background: #646cff;
   transform: translateY(-4px);
@@ -238,8 +239,15 @@ body {
 
 
 /* ===== NOTES CARDS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
 body {
+  background: #242424;
   color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -262,7 +270,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* Slide up/down animation (original) */
+/* Slide up/down animation */
 @keyframes textSlide {
   0% {
     opacity: 0;
@@ -285,7 +293,7 @@ body {
   }
 }
 
-/* Additional glow animation */
+/* Glow animation */
 @keyframes glow {
   0%, 100% {
     text-shadow: 0 0 5px #646cff;
@@ -296,13 +304,10 @@ body {
   }
 }
 
-
-/* Section spacing */
 .cards-section {
   padding: 30px 20px;
 }
 
-/* Card grid layout */
 .card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -310,13 +315,11 @@ body {
   justify-content: center;
 }
 
-/* Individual card */
 .notes-card {
   border: 1px solid #646cff;
-
   background-origin: padding-box;
   padding: 20px;
-  border-radius: 12px solid #646cff;
+  border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -326,25 +329,21 @@ body {
   box-shadow: 0 12px 30px #646cff;
 }
 
-/* Image */
 .notes-img {
   width: 100px;
   margin-bottom: 20px;
 }
 
-/* Headings */
 .notes-card h3 {
   margin-bottom: 10px;
 }
 
-/* Paragraph */
 .notes-card p {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 15px;
 }
 
-/* Custom button */
 .btn-outline-custom {
   background: transparent;
   color: #646cff;
@@ -366,11 +365,8 @@ body {
   }
 }
 
-/* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* ---------------------------Registration----------------------------------- */

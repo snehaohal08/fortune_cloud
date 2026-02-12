@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Notes</title>
+</head>
+<body>
+
+    <h2>Upload Notes</h2>
+
+    <form id="uploadForm">
+        <input type="file" id="imageInput" accept="image/*" required><br><br>
+        <input type="text" id="titleInput" placeholder="Enter Heading" required><br><br>
+        <textarea id="descInput" placeholder="Enter Description" required></textarea><br><br>
+        <input type="file" id="pdfInput" accept="application/pdf" required><br><br>
+        <button type="submit">Upload</button>
+    </form>
+
+<script>
+document.getElementById("uploadForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let image = document.getElementById("imageInput").files[0];
+    let pdf = document.getElementById("pdfInput").files[0];
+    let title = document.getElementById("titleInput").value;
+    let desc = document.getElementById("descInput").value;
+
+    let imageURL = URL.createObjectURL(image);
+    let pdfURL = URL.createObjectURL(pdf);
+
+    // Data ko URL me bhej rahe hai
+    window.location.href = 
+        "Notes_cards.html?img=" + encodeURIComponent(imageURL) +
+        "&title=" + encodeURIComponent(title) +
+        "&desc=" + encodeURIComponent(desc) +
+        "&pdf=" + encodeURIComponent(pdfURL);
+});
+</script>
+
+</body>
+</html>

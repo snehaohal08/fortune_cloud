@@ -1,160 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Notes Cards</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Cards</title>
 
-        <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- Custom CSS -->
+    
+</head>
+<body>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="index.css">
-    </head>
+    <header class="main-header">
+        <h1>Notes <span>4 You</span></h1>
+    </header>
 
-    <body>
-        <header class="main-header">
-            <h1>Notes <span>4 You</span></h1>
-        </header>
+    <section class="cards-section">
+        <div class="card-container">
+            <!-- Cards will be dynamically added here -->
+        </div>
+    </section>
 
-        <section class="cards-section">
-            <div class="card-container">
+    <script>
+        const notesCards = [
+            { title: "HTML Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/html1.png", pdf: "./pdf/assignment 1st page(MAD).pdf" },
+            { title: "CSS Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/css.png", pdf: "./pdf/assignment-1st-page-MAD.pdf" },
+            { title: "JavaScript Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/js.png", pdf: "./pdf/assignment-1st-page-MAD.pdf" },
+            { title: "Bootstrap Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/bt.png", pdf: "./pdf/assignment-1st-page-MAD.pdf" },
+            { title: "React Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/react.png", pdf: "./pdf/assignment-1st-page-MAD.pdf" },
+            { title: "Java Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/java.png", pdf: "./pdf/assignment-1st-page-MAD.pdf" },
+            { title: "Python Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/pu.png", pdf: "./pdf/assignment-1st-page-MAD.pdf" },
+            { title: "MySql Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/my.png", pdf: "./pdf/assignment-1st-page-MAD.pdf" },
+            { title: "MongoDB Notes", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", img: "./img/MB.png", pdf: "./pdf/assignment-1st-page-MAD.pdf" }
+        ];
 
-                <!-- Card 1 -->
-                <div class="notes-card">
-                    <img src="./img/html1.png" alt="img not found"
-                        class="notes-img">
-                    <h3>HTML Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
+        const container = document.querySelector(".card-container");
 
-                    <a href="./pdf//assignment 1st page(MAD).pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
+        notesCards.forEach(card => {
+            const div = document.createElement("div");
+            div.className = "notes-card";
+            div.innerHTML = `
+                <img src="${card.img}" alt="img not found" class="notes-img">
+                <h3>${card.title}</h3>
+                <p>${card.description}</p>
+                <a href="${card.pdf}" target="_blank" class="btn btn-outline-custom">Open</a>
+                <a href="${card.pdf}" download class="btn btn-outline-custom">Download</a>
+            `;
+            container.appendChild(div);
+        });
+    </script>
 
-                    <a href="./pdf//assignment 1st page(MAD).pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="notes-card">
-                    <img src="./img//css.png" alt="img not found"
-                        class="notes-img">
-                    <h3>CSS Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-
-                    <a href="./pdf//assignment-1st-page-MAD.pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
-
-                    <a href="./pdf//assignment-1st-page-MAD.pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="notes-card">
-                    <img src="./img/js.png" alt="img not found"
-                        class="notes-img">
-                    <h3>JavaScript Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="notes-card">
-                    <img src="./img/bt.png" alt="img not found"
-                        class="notes-img">
-                    <h3>Bootstrap Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="notes-card">
-                    <img src="./img/react.png" alt="img not found"
-                        class="notes-img">
-                    <h3>React Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-                <!-- Card 6 -->
-                <div class="notes-card">
-                    <img src="./img/java.png" alt="img not found"
-                        class="notes-img">
-                    <h3>Java Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-                <!-- Card 7 -->
-                <div class="notes-card">
-                    <img src="./img/pu.png" alt="img not found"
-                        class="notes-img">
-                    <h3>React Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-                <!-- Card 8 -->
-                <div class="notes-card">
-                    <img src="./img/my.png" alt="img not found"
-                        class="notes-img">
-                    <h3>React Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-                <!-- Card 9 -->
-                <div class="notes-card">
-                    <img src="./img/MB.png" alt="img not found"
-                        class="notes-img">
-                    <h3>React Notes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" target="_blank"
-                        class="btn btn-outline-custom">Open</a>
-
-                    <a href="./pdf/assignment-1st-page-MAD.pdf" download
-                        class="btn btn-outline-custom">Download</a>
-                </div>
-
-            </div>
-        </section>
-
-    </body>
+</body>
 </html>

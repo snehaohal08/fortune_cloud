@@ -1,48 +1,45 @@
-const header = document.querySelector(".main-header1");
+document.addEventListener("DOMContentLoaded", function () {
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
+  /* NAVBAR SCROLL */
+  const header = document.querySelector(".main-header1");
+  if (header) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
   }
+
+  /* LOGIN / REGISTER SWITCH */
+  const loginForm = document.querySelector(".login");
+  const registerForm = document.querySelector(".register");
+  const showRegister = document.getElementById("showRegister");
+  const showLogin = document.getElementById("showLogin");
+
+  if (showRegister && showLogin && loginForm && registerForm) {
+    showRegister.onclick = () => {
+      loginForm.classList.remove("active");
+      registerForm.classList.add("active");
+    };
+
+    showLogin.onclick = () => {
+      registerForm.classList.remove("active");
+      loginForm.classList.add("active");
+    };
+
+    loginForm.classList.add("active");
+  }
+
+  /* LOGIN SUBMIT */
+  const loginlink = document.getElementById("login-link");
+  if (loginlink) {
+    loginlink.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Login successful!");
+      window.location.href = "./Notes_cards.html";
+    });
+  }
+
 });
-const loginForm = document.querySelector(".login");
-const registerForm = document.querySelector(".register");
-
-document.getElementById("showRegister").onclick = () => {
-  loginForm.classList.remove("active");
-  registerForm.classList.add("active");
-};
-
-document.getElementById("showLogin").onclick = () => {
-  registerForm.classList.remove("active");
-  loginForm.classList.add("active");
-};
-
-// default
-loginForm.classList.add("active");
-
-
-const loginlink = document.getElementById("login-link");
-const registrationlink = document.getElementById("registration-link");
-
-loginlink.addEventListener("submit",function(e){
-  e.preventDefault();
-  alert("Login successful!");
-  window.location.href="./Notes_cards.html";
-
-})
-
-registrationlink.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  alert("Registration successful!");
-
-  // Register form hide
-  registerForm.classList.remove("active");
-
-  // Login form show
-  loginForm.classList.add("active");
-});
-

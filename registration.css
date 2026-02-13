@@ -153,3 +153,62 @@ button{
 .side-panel h1{
   font-size:40px;
 }
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .container{
+    width:95%;
+    height:auto;
+  }
+
+  .form-section{
+    padding:40px;
+  }
+
+  .side-panel h1{
+    font-size:30px;
+  }
+
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px){
+
+  body{
+    padding-top:90px;
+  }
+
+  .container{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .form-section{
+    width:100%;
+    padding:40px 25px;
+  }
+
+  .side-panel{
+    width:100%;
+    height:200px;
+    border-radius:0;
+  }
+
+  .side-panel h1{
+    font-size:28px;
+  }
+
+  /* Navbar Responsive */
+  .nav-wrapper{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav-links{
+    flex-direction:column;
+    gap:15px;
+  }
+
+}
+

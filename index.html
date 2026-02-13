@@ -141,8 +141,43 @@
                     </div>
                 </div>
             </section>
+<!-- ================================= Contact section ================================================ -->
+            <section class="contact-section" id="contact">
+                <div class="contact-container">
+                    <h2>Contact Us</h2>
+                    <p>Have questions? Feel free to reach out!</p>
 
-            <section class="Contact-section"></section>
+                    <form id="contactForm">
+
+                        <div class="input-box">
+                            <label>Name</label>
+                            <input type="text" id="name"
+                                placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label>Email</label>
+                            <input type="email" id="email"
+                                placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label>Message</label>
+                            <textarea id="message" rows="5"
+                                placeholder="Write your message..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-custom">Send Message</button>
+
+                        <p class="success-msg" id="successMsg"></p>
+
+                    </form>
+                </div>
+            </section>
+            <div class="footer-bottom">
+                <p>© 2026 Notes For You | All Rights Reserved</p>
+            </div>
         </main>
         <script src="index.js"></script>
     </body>

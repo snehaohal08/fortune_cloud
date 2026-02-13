@@ -62,7 +62,7 @@ body {
 }
 
 .nav-wrapper {
-  max-width:100%;
+  max-width: 100%;
   margin: auto;
   padding: 15px 30px;
   display: flex;
@@ -133,7 +133,7 @@ body {
     width: 100%;
     flex-direction: column;
     text-align: center;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     gap: 15px;
     padding: 20px 0;
     display: none;
@@ -447,4 +447,118 @@ body {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background: #1e1e1e;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  background: #2c2c2c;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.contact-container p {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* Input Fields */
+.input-box {
+  margin-bottom: 18px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+  border-color: #646cff;
+}
+
+/* Button */
+/* .contact-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #646cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+} */
+
+.contact-container button:hover {
+  background: #646cff;
+}
+
+/* Success Message */
+.success-msg {
+  margin-top: 10px;
+  text-align: center;
+  color: lightgreen;
+}
+
+/* ===== FOOTER ===== */
+.footer-bottom {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+
+.contact-section h2 {
+  background: linear-gradient(90deg, #646cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite;
+  letter-spacing: 2px;
+}
+ .contact-section .btn-outline-custom {
+  background: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.btn-outline-custom:hover {
+  background-color: #646cff;
+  color: #fff;
+  transform: scale(1.05);
 }

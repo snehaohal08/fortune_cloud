@@ -71,14 +71,14 @@ function displayCards(data) {
     }
 }
 
-/* 🔍 Search */
+/*  Search */
 document.getElementById("searchInput").addEventListener("input", () => {
     const searchValue = document.getElementById("searchInput").value.toLowerCase();
     filteredNotes = notesCards.filter(card => card.title.toLowerCase().includes(searchValue));
     displayCards(filteredNotes);
 });
 
-/* 🔽 Sort toggle */
+/*  Sort toggle */
 document.getElementById("sortToggle").addEventListener("click", () => {
     if (sortAsc) {
         filteredNotes.sort((a,b)=>b.title.localeCompare(a.title));

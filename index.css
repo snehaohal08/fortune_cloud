@@ -116,14 +116,18 @@ body {
 }
 
 /* MOBILE STYLES */
-@media (max-width: 768px) {
+@media (max-width:768px) {
+
   .menu-toggle {
     display: block;
   }
 
   .nav-wrapper {
-    flex-direction: row;
-    position: relative;
+    padding: 8px 15px;
+  }
+
+  .logo-brand img {
+    height: 40px;
   }
 
   .nav-links {
@@ -134,16 +138,16 @@ body {
     flex-direction: column;
     text-align: center;
     background: rgba(0, 0, 0, 0.9);
-    gap: 15px;
-    padding: 20px 0;
+    gap: 10px;
+    padding: 10px 0;
     display: none;
   }
 
   .nav-links.active {
     display: flex;
   }
-}
 
+}
 
 /* ===== HERO SECTION ===== */
 .section-hero {
@@ -548,7 +552,8 @@ body {
   animation: glow 2s ease-in-out infinite;
   letter-spacing: 2px;
 }
- .contact-section .btn-outline-custom {
+
+.contact-section .btn-outline-custom {
   background: transparent;
   color: #646cff;
   border: 2px solid #646cff;
@@ -557,6 +562,7 @@ body {
   transition: all 0.3s ease;
   width: 100%;
 }
+
 .btn-outline-custom:hover {
   background-color: #646cff;
   color: #fff;

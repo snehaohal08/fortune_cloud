@@ -153,6 +153,10 @@ button{
 .side-panel h1{
   font-size:40px;
 }
+.menu-toggle i{
+  color:white;
+  font-size:26px;
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
@@ -201,14 +205,31 @@ button{
 
   /* Navbar Responsive */
   .nav-wrapper{
-    flex-direction:column;
-    gap:10px;
+    flex-direction:row;
+    padding:10px 20px;
+  }
+
+  .logo-brand img{
+    height:45px;
   }
 
   .nav-links{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,0.95);
     flex-direction:column;
+    text-align:center;
     gap:15px;
+    padding:20px 0;
+    display:none;
   }
+
+  .nav-links.active{
+    display:flex;
+  }
+
 
 }
 

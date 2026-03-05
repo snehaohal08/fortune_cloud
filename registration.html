@@ -14,19 +14,24 @@
         <!-- ================= NAVBAR ================= -->
         <header class="main-header1">
             <div class="nav-wrapper">
+
                 <div class="logo-brand">
-                    <img src="l.jpg" alt="Logo">
+                    <img src="img/l.jpg" alt="Logo">
                 </div>
 
+                <div class="menu-toggle" id="menuToggle">
+  <i class="fa fa-bars"></i>
+</div>
+
                 <nav>
-                    <ul class="nav-links">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./index.html">About</a></li>
-                        <li><a href="./Notes_cards.html">Contact</a></li>
-                        <!-- <li><a  id="#registration-link">Registration</a></li> -->
-                        <li><a href="#login">Login</a></li>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="index.html">Contact</a></li>
+                        <li><a href="registration.html">Login</a></li>
                     </ul>
                 </nav>
+
             </div>
         </header>
 
@@ -42,12 +47,14 @@
                         <h2>Login</h2>
 
                         <div class="input-box">
-                            <input type="text" placeholder="Username" required id="username">
+                            <input type="text" placeholder="Username" required
+                                id="username">
                             <i class="fa fa-user"></i>
                         </div>
 
                         <div class="input-box">
-                            <input type="password" placeholder="Password" required id="password">
+                            <input type="password" placeholder="Password"
+                                required id="password">
                             <i class="fa fa-lock"></i>
                         </div>
 
@@ -64,17 +71,20 @@
                         <h2>Register</h2>
 
                         <div class="input-box">
-                            <input type="text" placeholder="Username" required id="registerUsername">
+                            <input type="text" placeholder="Username" required
+                                id="registerUsername">
                             <i class="fa fa-user"></i>
                         </div>
 
                         <div class="input-box">
-                            <input type="email" placeholder="Email" required id="registerEmail">
+                            <input type="email" placeholder="Email" required
+                                id="registerEmail">
                             <i class="fa fa-envelope"></i>
                         </div>
 
                         <div class="input-box">
-                            <input type="password" placeholder="Password" required id="registerPassword">
+                            <input type="password" placeholder="Password"
+                                required id="registerPassword">
                             <i class="fa fa-lock"></i>
                         </div>
 
@@ -84,7 +94,7 @@
                             Already have an account?
                             <span id="showLogin">Login</span>
                         </p>
-                        
+
                     </form>
 
                 </div>

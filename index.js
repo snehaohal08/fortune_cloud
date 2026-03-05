@@ -43,15 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
+//   const menuToggle = document.getElementById("menuToggle");
+//   const navLinks = document.getElementById("navLinks");
 
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-    });
-  }
+//   if (menuToggle && navLinks) {
+//     menuToggle.addEventListener("click", function () {
+//       navLinks.classList.toggle("active");
+//     });
+//   }
 
-});
+// });
+
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navLinks");
+
+toggle.onclick = function(){
+  nav.classList.toggle("active");
+}
